@@ -231,7 +231,7 @@ keyboard_callback (arg_unused (GtkWidget *widget), GdkEventKey *e,
 
   switch (e->keyval)
     {
-    case GDK_KEY_Escape:       /* quit */
+    case GDK_KEY_F12:       /* quit */
       gtk_widget_destroy (app);
       return TRUE;
     case GDK_KEY_F11:          /* toggle full-screen */
@@ -249,6 +249,9 @@ keyboard_callback (arg_unused (GtkWidget *widget), GdkEventKey *e,
     case GDK_KEY_numbersign:
       key = "#";
       break;
+    case GDK_KEY_Escape:
+      key = "EXIT";
+      break;
     case GDK_KEY_Return:
       key = "ENTER";
       break;
@@ -259,10 +262,10 @@ keyboard_callback (arg_unused (GtkWidget *widget), GdkEventKey *e,
       key = "GREEN";
       break;
     case GDK_KEY_F3:
-      key = "BLUE";
+      key = "YELLOW";
       break;
     case GDK_KEY_F4:
-      key = "YELLOW";
+      key = "BLUE";
       break;
     case GDK_KEY_Down:
       key = "CURSOR_DOWN";
